@@ -1,10 +1,13 @@
 import Layout from '../components/Layout/Layout';
+import SearchInput from '../components/SearchInput/SearchInput';
+import styles from "../styles/Home.module.css";
 
 export default function Home({ countries }) {
   console.log(countries);
   return (
     <Layout>
-      <div>Found {countries.length} countries</div>
+      <div className={styles.counts}>Found {countries.length} countries</div>
+      <SearchInput placeholder="Filter by country name, region or sub-region" />
     </Layout>
   )
 }
